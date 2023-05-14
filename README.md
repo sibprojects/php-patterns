@@ -6,3 +6,7 @@ An abstract factory defines an interface for creating all available types of pro
 ## Builder
 The builder is a generative design pattern that allows you to create objects step by step.
 Unlike other generative patterns, the Builder allows you to produce different products using the same building process.
+
+## Factory method
+A factory method is a generative design pattern that solves the problem of creating different products without specifying specific product classes.
+The factory method specifies the method that should be used instead of calling the new operator to create product objects. Subclasses can override this method to change the type of products they create.

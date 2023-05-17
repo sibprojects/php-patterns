@@ -14,3 +14,8 @@ The factory method specifies the method that should be used instead of calling t
 ## Prototype
 A prototype is a generative pattern that allows you to copy objects of any complexity without being tied to their specific classes.
 All Prototype classes share a common interface. Therefore, you can copy objects regardless of their specific types and always be sure that you get an exact copy. Cloning is done by the prototype object itself, which allows it to copy the values of all fields, even private ones.
+
+## Singleton
+Singleton is a generative pattern that guarantees the existence of only one object of a certain class, and also allows you to reach this object from anywhere in the program.
+Singleton has the same advantages and disadvantages as global variables. It's incredibly convenient to use, but it breaks the modularity of your code.
+You can't just pick up and use a class that depends on a singleton in another program. To do this, you will have to emulate the presence of a loner there as well. Most often, this problem manifests itself when writing unit tests.

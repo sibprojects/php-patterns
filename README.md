@@ -19,3 +19,7 @@ All Prototype classes share a common interface. Therefore, you can copy objects 
 Singleton is a generative pattern that guarantees the existence of only one object of a certain class, and also allows you to reach this object from anywhere in the program.
 Singleton has the same advantages and disadvantages as global variables. It's incredibly convenient to use, but it breaks the modularity of your code.
 You can't just pick up and use a class that depends on a singleton in another program. To do this, you will have to emulate the presence of a loner there as well. Most often, this problem manifests itself when writing unit tests.
+
+## Adapter
+An adapter is a structural pattern that allows incompatible objects to be friends.
+The adapter acts as a layer between two objects, turning calls from one into calls understandable to the other.

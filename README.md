@@ -23,3 +23,7 @@ You can't just pick up and use a class that depends on a singleton in another pr
 ## Adapter
 An adapter is a structural pattern that allows incompatible objects to be friends.
 The adapter acts as a layer between two objects, turning calls from one into calls understandable to the other.
+
+## Bridge
+A bridge is a structural pattern that divides business logic or a large class into several separate hierarchies, which can then be developed separately from each other.
+One of these hierarchies (abstraction) will receive a reference to objects of another hierarchy (implementation) and will delegate the main work to them. Due to the fact that all implementations will follow a common interface, they can be interchanged within the abstraction.

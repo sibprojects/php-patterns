@@ -39,3 +39,8 @@ One of these hierarchies (abstraction) will receive a reference to objects of an
 The Composite is a structural pattern that allows you to create a tree of objects and work with it in the same way as with a single object.
 
 The Composite has long been synonymous with all the tasks involved in building a tree of objects. All Composite operations are based on recursion and "summation" of results on the branches of the tree.
+
+### Decorator
+A Decorator is a structural pattern that allows you to add new behaviors to objects on the fly by wrapping them in wrapper objects.
+
+A Decorator allows objects to be wrapped an infinite number of times, thanks to the fact that both wrappers and the actual wrapped objects share a common interface.

@@ -44,3 +44,8 @@ The Composite has long been synonymous with all the tasks involved in building a
 A Decorator is a structural pattern that allows you to add new behaviors to objects on the fly by wrapping them in wrapper objects.
 
 A Decorator allows objects to be wrapped an infinite number of times, thanks to the fact that both wrappers and the actual wrapped objects share a common interface.
+
+### Facade
+A Facade is a structural pattern that provides a simple (but stripped-down) interface to a complex object system, library, or framework.
+
+In addition to reducing the overall complexity of a program, Facade also helps to bring code that depends on an external system into a single place.

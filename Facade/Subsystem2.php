@@ -1,6 +1,6 @@
 <?php
 
-namespace RefactoringGuru\Facade\Conceptual;
+namespace Facade;
 
 /**
  * Some facades can work with different subsystems at the same time.

@@ -49,3 +49,8 @@ A Decorator allows objects to be wrapped an infinite number of times, thanks to 
 A Facade is a structural pattern that provides a simple (but stripped-down) interface to a complex object system, library, or framework.
 
 In addition to reducing the overall complexity of a program, Facade also helps to bring code that depends on an external system into a single place.
+
+### Flyweight
+Flyweight is a structural pattern that saves memory by sharing the common state rendered in one object among many objects.
+
+Flyweight allows you to save memory by caching the same data used in different objects.

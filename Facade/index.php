@@ -1,6 +1,6 @@
 <?php
 
-namespace RefactoringGuru\Facade\Conceptual;
+namespace Facade;
 
 /**
  * Client code works with complex subsystems through a simple interface,

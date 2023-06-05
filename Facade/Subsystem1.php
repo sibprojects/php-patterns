@@ -1,6 +1,6 @@
 <?php
 
-namespace RefactoringGuru\Facade\Conceptual;
+namespace Facade;
 
 /**
  * The subsystem can accept requests either from the facade or from the client directly.

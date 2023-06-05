@@ -1,5 +1,7 @@
 <?php
 
+namespace Facade;
+
 /**
  * The Facade class provides a simple interface for complex logic of one or
  * multiple subsystems. The facade delegates client requests to the appropriate

@@ -54,3 +54,8 @@ In addition to reducing the overall complexity of a program, Facade also helps t
 Flyweight is a structural pattern that saves memory by sharing the common state rendered in one object among many objects.
 
 Flyweight allows you to save memory by caching the same data used in different objects.
+
+### Proxy
+A Proxy is an object that acts as a layer between the client and the actual service object. The Proxy receives calls from the client, performs its function (access control, caching, request modification, etc.), and then passes the call to the service object.
+
+The Proxy has the same interface as the real object, so it makes no difference for the client whether to work through the Proxy or directly.

@@ -59,3 +59,8 @@ Flyweight allows you to save memory by caching the same data used in different o
 A Proxy is an object that acts as a layer between the client and the actual service object. The Proxy receives calls from the client, performs its function (access control, caching, request modification, etc.), and then passes the call to the service object.
 
 The Proxy has the same interface as the real object, so it makes no difference for the client whether to work through the Proxy or directly.
+
+### ChainOfResponsibility
+A chain of responsibility is a behavioral pattern that allows you to pass a request through a chain of potential handlers until one of them processes the request.
+
+Eliminates the rigid binding of the sender of the request to its recipient, allowing you to build a chain of various handlers dynamically.

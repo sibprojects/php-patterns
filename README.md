@@ -64,3 +64,8 @@ The Proxy has the same interface as the real object, so it makes no difference f
 A chain of responsibility is a behavioral pattern that allows you to pass a request through a chain of potential handlers until one of them processes the request.
 
 Eliminates the rigid binding of the sender of the request to its recipient, allowing you to build a chain of various handlers dynamically.
+
+### Iterator
+An Iterator is a behavioral pattern that allows you to sequentially traverse a complex collection without revealing the details of its implementation.
+
+Thanks to the Iterator, the client can iterate through different collections in the same way, using a single Iterator interface.

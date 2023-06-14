@@ -12,7 +12,7 @@ namespace Builder;
  */
 class Product
 {
-    public $parts = [];
+    public array $parts = [];
 
     public function listParts(): void
     {

@@ -9,7 +9,7 @@ namespace Builder;
  */
 class Builder implements BuilderInterface
 {
-    private $product;
+    private Product $product;
 
     /**
      * The new builder instance must contain an empty product object,

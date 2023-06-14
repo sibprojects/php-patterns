@@ -8,7 +8,7 @@ namespace Adapter;
  */
 class Adapter extends Target
 {
-    private $adaptee;
+    private Adaptee $adaptee;
 
     public function __construct(Adaptee $adaptee)
     {

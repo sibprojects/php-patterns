@@ -9,10 +9,7 @@ namespace Bridge;
  */
 class BridgeAbstraction
 {
-    /**
-     * @var Implementation
-     */
-    protected $implementation;
+    protected Implementation $implementation;
 
     public function __construct(Implementation $implementation)
     {

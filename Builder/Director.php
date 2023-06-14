@@ -10,10 +10,7 @@ namespace Builder;
  */
 class Director
 {
-    /**
-     * @var Builder
-     */
-    private $builder;
+    private Builder $builder;
 
     /**
      * Director works with any builder instance that is passed to him

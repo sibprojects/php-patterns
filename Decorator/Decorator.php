@@ -10,7 +10,7 @@ namespace Decorator;
  */
 class Decorator implements Component
 {
-    protected $component;
+    protected Component $component;
 
     public function __construct(Component $component)
     {

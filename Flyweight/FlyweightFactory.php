@@ -10,7 +10,7 @@ namespace Flyweight;
  */
 class FlyweightFactory
 {
-    private $flyweights = [];
+    private array $flyweights = [];
 
     public function __construct(array $initialFlyweights)
     {

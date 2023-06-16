@@ -7,7 +7,7 @@ namespace Proxy;
  */
 class Proxy implements Subject
 {
-    private $realSubject;
+    private RealSubject $realSubject;
 
     /**
      * The proxy stores a reference to an object of class RealSubject. The client can

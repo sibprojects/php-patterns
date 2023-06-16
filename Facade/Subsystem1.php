@@ -14,8 +14,6 @@ class Subsystem1
         return "Subsystem1: Ready!\n";
     }
 
-    // ...
-
     public function operationN(): string
     {
         return "Subsystem1: Go!\n";

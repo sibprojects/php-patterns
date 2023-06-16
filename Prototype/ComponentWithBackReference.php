@@ -4,7 +4,7 @@ namespace Prototype;
 
 class ComponentWithBackReference
 {
-    public $prototype;
+    public Prototype $prototype;
 
     /**
      * Note that the constructor will not be executed during

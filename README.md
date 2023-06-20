@@ -69,3 +69,8 @@ Eliminates the rigid binding of the sender of the request to its recipient, allo
 An Iterator is a behavioral pattern that allows you to sequentially traverse a complex collection without revealing the details of its implementation.
 
 Thanks to the Iterator, the client can iterate through different collections in the same way, using a single Iterator interface.
+
+## Memento
+A Memento is a behavioral pattern that allows you to take snapshots of the internal state of objects and then restore them.
+
+At the same time, the Memento does not disclose the details of the implementation of objects, and the client does not have access to the protected information of the object.

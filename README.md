@@ -74,3 +74,8 @@ Thanks to the Iterator, the client can iterate through different collections in 
 A Memento is a behavioral pattern that allows you to take snapshots of the internal state of objects and then restore them.
 
 At the same time, the Memento does not disclose the details of the implementation of objects, and the client does not have access to the protected information of the object.
+
+## State
+A State is a behavioral pattern that allows you to dynamically change the behavior of an object when its state changes.
+
+State-specific behaviors are moved to separate classes. The original class keeps a reference to one of these state objects and delegates work to it.

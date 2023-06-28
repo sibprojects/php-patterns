@@ -79,3 +79,6 @@ At the same time, the Memento does not disclose the details of the implementatio
 A State is a behavioral pattern that allows you to dynamically change the behavior of an object when its state changes.
 
 State-specific behaviors are moved to separate classes. The original class keeps a reference to one of these state objects and delegates work to it.
+
+## Template Method
+A Template Method is a behavioral pattern that defines the skeleton of an algorithm in a superclass and forces subclasses to implement the specific steps of that algorithm.

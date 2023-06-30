@@ -82,3 +82,8 @@ State-specific behaviors are moved to separate classes. The original class keeps
 
 ## Template Method
 A Template Method is a behavioral pattern that defines the skeleton of an algorithm in a superclass and forces subclasses to implement the specific steps of that algorithm.
+
+## Command
+A Command is a behavioral pattern that allows you to wrap queries or simple operations in separate objects.
+
+This allows you to delay the execution of commands, line them up in a queue, as well as store history and cancel.

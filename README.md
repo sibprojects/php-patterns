@@ -1,7 +1,31 @@
 # Examples of PHP design patterns
 
 ### Abstract Factory
-An abstract factory defines an interface for creating all available types of products, and each specific factory implementation generates products of one of the variations. The client code calls the factory methods to get the products instead of creating them on its own with the new operator. At the same time, the factory itself ensures that the product of the desired variation is created.
+Abstract Factory is a design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It allows creating objects that adhere to a specific interface while hiding the concrete implementation from the client.
+
+The main idea of the Abstract Factory is to act as a factory of factories. It defines an interface for creating factories that, in turn, create concrete objects. Thus, the Abstract Factory ensures the creation of objects that are related to each other without explicitly mentioning their classes.
+
+The main components of the Abstract Factory pattern are:
+<ol>
+<li>Abstract Factory: Defines an interface for creating families of related objects.</li>
+<li>Concrete Factory: Implements the interface of the Abstract Factory and creates concrete objects.</li>
+<li>Abstract Products: Define interfaces for various types of products created by the factory.</li>
+<li>Concrete Products: Implement the interfaces of abstract products.</li>
+</ol>
+
+Using the Abstract Factory pattern allows creating families of related objects while ensuring their compatibility. Client code works with abstract classes and interfaces, making it independent of the specific product classes being created.
+
+The benefits of using the Abstract Factory pattern include:
+
+<ol>
+<li>Ensures the compatibility of created objects.</li>
+<li>Isolates client code from concrete product classes.</li>
+<li>Simplifies the replacement of product families as the client code depends only on abstract classes and interfaces.</li>
+<li>Facilitates the addition of new product variants and factories without modifying existing code.</li>
+</ol>
+
+However, it's important to note that the Abstract Factory pattern can become complex to maintain, especially if product families change or expand frequently. Additionally, adding a new product may require modifications to all existing factories, which can be labor-intensive.
+
 
 ### Builder
 The builder is a generative design pattern that allows you to create objects step by step.
@@ -92,3 +116,8 @@ This allows you to delay the execution of commands, line them up in a queue, as 
 The Mediator is a behavioral pattern that facilitates communication between system components.
 
 The Rediator removes direct connections between individual components, forcing them to communicate with each other through itself.
+
+## Observer
+An Observer is a behavioral pattern that allows objects to notify other objects of changes in their state.
+
+At the same time, Observers can freely subscribe and unsubscribe from these notifications.

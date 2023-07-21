@@ -58,9 +58,18 @@ Using the Builder pattern, we can easily create different types of houses withou
 
 
 ### Factory method
-A factory method is a generative design pattern that solves the problem of creating different products without specifying specific product classes.
 
-The factory method specifies the method that should be used instead of calling the new operator to create product objects. Subclasses can override this method to change the type of products they create.
+The "Factory Method" pattern belongs to the class of "Creational" design patterns. It provides an interface for creating objects but allows subclasses to decide which classes to instantiate. This pattern delegates the object creation to subclasses rather than the main class.
+
+The main idea of the Factory Method pattern is that instead of directly calling a constructor to create objects, a factory method is used. This method is defined in an interface or an abstract class and is implemented by various subclasses to create different types of objects.
+
+Advantages of the Factory Method pattern:
+
+<ol>
+  <li>It allows the client code to be independent of specific product classes, as it operates only with abstract types through the creation interface.</li>
+  <li>It allows adding new products without modifying existing factory and client code.</li>
+  <li>It hides the complexities of object creation and delegates the responsibility to the respective factories.</li>
+</ol>
 
 ### Prototype
 A prototype is a generative pattern that allows you to copy objects of any complexity without being tied to their specific classes.

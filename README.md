@@ -72,9 +72,13 @@ Advantages of the Factory Method pattern:
 </ol>
 
 ### Prototype
-A prototype is a generative pattern that allows you to copy objects of any complexity without being tied to their specific classes.
+The Prototype pattern is one of the generative design patterns and is used to create objects by cloning an existing object, instead of creating a new object from scratch. It allows creating copies of objects, avoiding the need for redundant code to initialize them.
 
-All Prototype classes share a common interface. Therefore, you can copy objects regardless of their specific types and always be sure that you get an exact copy. Cloning is done by the prototype object itself, which allows it to copy the values of all fields, even private ones.
+The main idea behind the Prototype pattern is to have an abstract base class that contains a cloning method. Subclasses of this base class override the cloning method to create their own copies of objects.
+
+Applying the Prototype pattern reduces the number of classes in the program and promotes flexibility in creating new objects since changes in the classes do not affect the process of their cloning.
+
+An example of using the Prototype pattern could be when we have a complex object that requires significant resources for initialization, and we want to create many similar objects with different values without reinitializing all the data.
 
 ### Singleton
 Singleton is a generative pattern that guarantees the existence of only one object of a certain class, and also allows you to reach this object from anywhere in the program.

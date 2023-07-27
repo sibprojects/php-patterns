@@ -159,3 +159,13 @@ The Rediator removes direct connections between individual components, forcing t
 An Observer is a behavioral pattern that allows objects to notify other objects of changes in their state.
 
 At the same time, Observers can freely subscribe and unsubscribe from these notifications.
+
+## Strategy
+
+A Strategy is a behavioral pattern that brings a set of algorithms into its own classes and makes them interchangeable.
+
+Other objects contain a reference to the Strategy object and delegate work to it. The program can replace this object with another if a different way of solving the problem is required.
+
+Applicability: The Strategy is often used in PHP code, especially where you need to replace the algorithm at runtime. But the pattern has a fairly strong competitor in the face of anonymous functions, which PHP has been supporting for quite some time.
+
+Signs of pattern application: A class delegates execution to a nested object of an abstract type or interface.

@@ -169,3 +169,10 @@ Other objects contain a reference to the Strategy object and delegate work to it
 Applicability: The Strategy is often used in PHP code, especially where you need to replace the algorithm at runtime. But the pattern has a fairly strong competitor in the face of anonymous functions, which PHP has been supporting for quite some time.
 
 Signs of pattern application: A class delegates execution to a nested object of an abstract type or interface.
+
+## Visitor
+
+This example shows the structure of the Visitor pattern, namely what classes it consists of, what roles these classes perform and how they interact with each other.
+
+After familiarizing yourself with the structure, it will be easier for you to understand the second example, which considers a real use case for the pattern in the PHP world.
+

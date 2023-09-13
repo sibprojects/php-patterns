@@ -176,3 +176,32 @@ This example shows the structure of the Visitor pattern, namely what classes it 
 
 After familiarizing yourself with the structure, it will be easier for you to understand the second example, which considers a real use case for the pattern in the PHP world.
 
+## Interpreter
+
+The Interpreter Pattern is a behavioral design pattern that is used to define a grammar for interpreting a language and provides a way to evaluate expressions in that language. It falls under the category of behavioral patterns in the Gang of Four (GoF) design patterns.
+
+Intent:
+
+<ol>
+    <li>Define a language for a particular domain and provide a way to interpret sentences in that language.</li>
+    <li>Represent grammar rules as objects and allow for their composition to create complex expressions.</li>
+    <li>Interpret sentences in the language using these objects.</li>
+</ol>
+
+Main Components:
+
+<ol>
+    <li>AbstractExpression: This is the abstract class or interface that declares an interpret() method. Concrete expressions are derived from this class or interface.</li>
+    <li>TerminalExpression: These are concrete expression classes that implement the interpret() method for terminal symbols in the grammar. Terminal expressions represent the basic building blocks of the language.</li>
+    <li>NonterminalExpression: These are concrete expression classes that implement the interpret() method for non-terminal symbols in the grammar. Non-terminal expressions combine one or more expressions, forming more complex expressions.</li>
+    <li>Context: The context contains information that needs to be interpreted. It can maintain the global state that the interpreter uses while interpreting expressions.</li>
+</ol>
+
+How it works:
+
+<ol>
+    <li>The client creates and configures an abstract syntax tree (AST) of the language's sentences. This AST consists of terminal and non-terminal expression objects.</li>
+    <li>The client initiates the interpretation process by calling the interpret() method on the root of the abstract syntax tree.</li>
+    <li>The interpretation process recursively traverses the abstract syntax tree, invoking interpret() on each expression.</li>
+    <li>Terminal expressions perform specific actions based on their interpretation, while non-terminal expressions typically combine the interpretations of their child expressions to achieve the final result.</li>
+</ol>

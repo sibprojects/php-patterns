@@ -205,3 +205,12 @@ How it works:
     <li>The interpretation process recursively traverses the abstract syntax tree, invoking interpret() on each expression.</li>
     <li>Terminal expressions perform specific actions based on their interpretation, while non-terminal expressions typically combine the interpretations of their child expressions to achieve the final result.</li>
 </ol>
+
+### Anti-corruption Layer
+
+The Anti-corruption Layer pattern is used in software development to isolate one's own system from changes or incompatibilities of external systems or third-party services.
+
+The point of this pattern is to create an intermediate layer between external systems and your own system, which will allow you to translate data and queries between different formats, structures or protocols. This anti-corruption layer insulates your system from changes in third-party services by providing adapters or facades that bring data to your system's standards.
+
+This approach allows your system to remain flexible and independent of external changes. You can update and change your external integrations without affecting the core functionality of your system. In addition, the anti-corruption layer simplifies the maintenance and expansion of the system, since changes in external services are easier to adapt within this layer than directly in the main system.
+

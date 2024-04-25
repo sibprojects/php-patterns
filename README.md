@@ -214,3 +214,10 @@ The point of this pattern is to create an intermediate layer between external sy
 
 This approach allows your system to remain flexible and independent of external changes. You can update and change your external integrations without affecting the core functionality of your system. In addition, the anti-corruption layer simplifies the maintenance and expansion of the system, since changes in external services are easier to adapt within this layer than directly in the main system.
 
+### Object Pool Design Pattern
+
+Object pooling can provide a notable enhancement in performance, particularly in scenarios where the overhead of creating a class instance is substantial, the frequency of class instantiation is high, and the quantity of active instances in use concurrently is minimal.
+
+Object pools, also known as resource pools, are utilized to manage object caching. Instead of creating new objects, clients with access to an object pool can simply request an object that has already been instantiated. Typically, the pool will be dynamic, meaning it can create new objects if the pool is empty. Alternatively, we can have a fixed-size pool that restricts the number of objects created.
+
+It's beneficial to store all reusable objects that are not currently in use within the same object pool. This allows them to be managed by a unified policy. To achieve this, the Reusable Pool class is designed as a singleton class.

@@ -221,3 +221,23 @@ Object pooling can provide a notable enhancement in performance, particularly in
 Object pools, also known as resource pools, are utilized to manage object caching. Instead of creating new objects, clients with access to an object pool can simply request an object that has already been instantiated. Typically, the pool will be dynamic, meaning it can create new objects if the pool is empty. Alternatively, we can have a fixed-size pool that restricts the number of objects created.
 
 It's beneficial to store all reusable objects that are not currently in use within the same object pool. This allows them to be managed by a unified policy. To achieve this, the Reusable Pool class is designed as a singleton class.
+
+### Unit of Work
+
+The Unit of Work pattern is one of the most complex moving parts of Object-Relational Mappers, and usually of Data Mappers in general. A Unit of Work is a component (for us, an object with collaborators) which keeps track of the new, modified and deleted domain objects whose changes have to be reflected in the data store. At at the end of a transaction the Unit of Work, if used correctly, is capable of producing a list of changes to perform on the data store, solving concurrency or consistency problems, and avoiding too many redundant queries in the relational case or a chatty communication in the schemaless one.
+
+The power of a Unit of Work resides in the fact that the actual database transaction is only performed (and kept opened) when the commit() method of the Unit of Work is called, while until that moment there is ideally no use of the database connection. This paradigm is called batch update.
+
+Objects stored in a Unit of Work have usually an associated state, like:
+<ol>
+    <li>new (which correspondes to INSERT queries during the batch update)</li>
+    <li>clean (no SQL queries have to be issued since the object has been retrieved and not modified)</li>
+    <li>dirty (UPDATE queries)</li>
+    <li>removed (DELETE queries)</li>
+</ol>
+
+There are different strategies for detecting changes to the object graph. The simplest strategy is comparing objects with a clean copy kept in memory (while it is usually not performance-wise to compare them with the database.)
+
+A more complex solution is having a specific interface which is implemented by the objects, so that they can manage their state and declare they are dirty or have to be removed. This implementation choice introduces a dependency from the domain layer to the infrastructure one, thus I prefer heavier approaches like the former, which is equivalent to generate a diff with your source control system of choice, but on the object graph instead of a codebase: the source files are not responsible for diffing themselves.
+
+Furthermore, the Unit of Work decoupling from the database state introduces an upper level of management, that makes us able to rollback changes if some constraint are not satisfied, or the computation has produced an error. In PHP, the client code can simply throw the object graph away, and the partial Unit of Work changeset is forgotten in the next requests.

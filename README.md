@@ -132,35 +132,35 @@ An Iterator is a behavioral pattern that allows you to sequentially traverse a c
 
 Thanks to the Iterator, the client can iterate through different collections in the same way, using a single Iterator interface.
 
-## Memento
+### Memento
 A Memento is a behavioral pattern that allows you to take snapshots of the internal state of objects and then restore them.
 
 At the same time, the Memento does not disclose the details of the implementation of objects, and the client does not have access to the protected information of the object.
 
-## State
+### State
 A State is a behavioral pattern that allows you to dynamically change the behavior of an object when its state changes.
 
 State-specific behaviors are moved to separate classes. The original class keeps a reference to one of these state objects and delegates work to it.
 
-## Template Method
+### Template Method
 A Template Method is a behavioral pattern that defines the skeleton of an algorithm in a superclass and forces subclasses to implement the specific steps of that algorithm.
 
-## Command
+### Command
 A Command is a behavioral pattern that allows you to wrap queries or simple operations in separate objects.
 
 This allows you to delay the execution of commands, line them up in a queue, as well as store history and cancel.
 
-## Mediator
+### Mediator
 The Mediator is a behavioral pattern that facilitates communication between system components.
 
 The Rediator removes direct connections between individual components, forcing them to communicate with each other through itself.
 
-## Observer
+### Observer
 An Observer is a behavioral pattern that allows objects to notify other objects of changes in their state.
 
 At the same time, Observers can freely subscribe and unsubscribe from these notifications.
 
-## Strategy
+### Strategy
 
 A Strategy is a behavioral pattern that brings a set of algorithms into its own classes and makes them interchangeable.
 
@@ -170,13 +170,13 @@ Applicability: The Strategy is often used in PHP code, especially where you need
 
 Signs of pattern application: A class delegates execution to a nested object of an abstract type or interface.
 
-## Visitor
+### Visitor
 
 This example shows the structure of the Visitor pattern, namely what classes it consists of, what roles these classes perform and how they interact with each other.
 
 After familiarizing yourself with the structure, it will be easier for you to understand the second example, which considers a real use case for the pattern in the PHP world.
 
-## Interpreter
+### Interpreter
 
 The Interpreter Pattern is a behavioral design pattern that is used to define a grammar for interpreting a language and provides a way to evaluate expressions in that language. It falls under the category of behavioral patterns in the Gang of Four (GoF) design patterns.
 
@@ -241,3 +241,38 @@ There are different strategies for detecting changes to the object graph. The si
 A more complex solution is having a specific interface which is implemented by the objects, so that they can manage their state and declare they are dirty or have to be removed. This implementation choice introduces a dependency from the domain layer to the infrastructure one, thus I prefer heavier approaches like the former, which is equivalent to generate a diff with your source control system of choice, but on the object graph instead of a codebase: the source files are not responsible for diffing themselves.
 
 Furthermore, the Unit of Work decoupling from the database state introduces an upper level of management, that makes us able to rollback changes if some constraint are not satisfied, or the computation has produced an error. In PHP, the client code can simply throw the object graph away, and the partial Unit of Work changeset is forgotten in the next requests.
+
+### Pipeline Pattern
+
+The "Pipeline Pattern" is an architectural design pattern used for sequential data processing, where the output of one stage is passed as input to the next. The main idea is to break down a complex process into several stages (steps), each of which processes data and passes it along the chain.
+
+How it works:
+    <ol>
+        <li>Input data enters the first stage of the pipeline.</li>
+        <li>Each stage processes the data, performs a specialized task, and passes the result to the next stage.</li>
+        <li>The final stage produces the output.</li>
+    </ol>
+
+This pattern is often used in systems that need to perform several independent operations or filters on data in sequence. Examples include data processing in ETL systems (Extract, Transform, Load), multimedia applications, compilers, and web servers (e.g., where each layer handles security checks, caching, logging, etc.).
+
+Key Advantages:
+    <ul>
+        <li><strong>Modularity:</strong> Each stage processes data independently, making it easier to modify or enhance individual stages.</li>
+        <li><strong>Ease of Testing:</strong> Since each stage is its own component, testing becomes more straightforward.</li>
+        <li><strong>Scalability:</strong> Pipelines can be parallelized, with different stages executed on separate threads or nodes.</li>
+    </ul>
+
+Example of Use:
+
+Consider data processing in a web application, where requests go through the following stages:
+    <ol>
+        <li>User Authentication</li>
+        <li>Request Logging</li>
+        <li>Data Validation</li>
+        <li>Business Logic Execution</li>
+        <li>Response Formation</li>
+    </ol>
+
+Each stage performs its specific task, processing data sequentially and passing it to the next.
+
+This pattern is also useful in stream data processing, such as in machine learning or analytics, where data undergoes several stages of filtering and transformation before being analyzed or stored.
